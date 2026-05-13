@@ -1,1 +1,1 @@
-
+-- For all available variables, see ~/.config/hypr/hyprland/variables.lua
