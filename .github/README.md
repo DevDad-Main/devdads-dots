@@ -23,7 +23,7 @@
 
 ## What's different from upstream
 
-- Custom nvim, fastfetch, tmux, and yazi configs
+- Custom nvim, fastfetch, tmux, and yazi configs — see [DevDad-Main/dotfiles](https://github.com/DevDad-Main/dotfiles)
 - Modified Hyprland config
 - Personal wallpaper collection
 
