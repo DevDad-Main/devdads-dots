@@ -3,6 +3,11 @@ if status is-interactive
     # No greeting
     set fish_greeting
 
+    # Suppress CachyOS prompt plugin errors
+    set -q pure_truncate_prompt_current_directory_keeps; or set -g pure_truncate_prompt_current_directory_keeps 2
+    set -q fish_prompt_pwd_dir_length; or set -g fish_prompt_pwd_dir_length 3
+    set -q __done_min_cmd_duration; or set -g __done_min_cmd_duration 5000
+
     # Use starship
     function starship_transient_prompt_func
         starship module character
