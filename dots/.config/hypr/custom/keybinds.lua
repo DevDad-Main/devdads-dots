@@ -21,6 +21,16 @@ hl.bind("SUPER + SHIFT + L", hl.dsp.window.move({direction = "r"}), {description
 hl.bind("SUPER + SHIFT + K", hl.dsp.window.move({direction = "u"}), {description = "Move window up"})
 hl.bind("SUPER + SHIFT + J", hl.dsp.window.move({direction = "d"}), {description = "Move window down"})
 
+-- Move window to workspace (SUPER + SHIFT + number)
+for i = 1, 10 do
+  local numberkey = { 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 }
+  hl.bind("SUPER + SHIFT + code:" .. numberkey[i], hl.dsp.window.move({ workspace = i, follow = false }), {description = "Move window to workspace " .. i})
+end
+for i = 1, 10 do
+  local numpadkey = { 87, 88, 89, 83, 84, 85, 79, 80, 81, 90 }
+  hl.bind("SUPER + SHIFT + code:" .. numpadkey[i], hl.dsp.window.move({ workspace = i, follow = false }))
+end
+
 hl.bind("ALT + F4", hl.dsp.window.close(), {description = "Close (Windows)"})
 hl.bind("SUPER + Q", hl.dsp.window.close(), {description = "Close"})
 hl.bind("SUPER + SHIFT + ALT + Q", hl.dsp.exec_cmd("hyprctl kill"), {description = "Forcefully zap a window"})
