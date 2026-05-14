@@ -15,6 +15,8 @@ if status is-interactive
     if test "$TERM" != "linux"
         starship init fish | source
         enable_transience
+
+		fastfetch
     end
     
     # Colors
